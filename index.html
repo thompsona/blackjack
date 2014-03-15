@@ -1,12 +1,27 @@
 <html>
   <head>
     <title>Blackjack</title>
+    <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
     <link href="styles/app.css" rel="stylesheet" type="text/css" media="screen">
   </head>
   <body>
+    <script type="x-mustache/template" id="hand">
+      <h2>
+        {{#isDealer}} 
+          Dealer
+        {{/isDealer}}
+        {{^isDealer}}
+          You
+        {{/isDealer}}
+        <span class="score">
+         {{scores}}
+        </span>
+      </h2>
+    </script>
     <script src="lib/jquery.js"></script>
     <script src="lib/underscore.js"></script>
     <script src="lib/backbone.js"></script>
+    <script src="lib/mustache.js"></script>
 
     <script src="compiled/app/models/Card.js"></script>
     <script src="compiled/app/models/Hand.js"></script>
@@ -16,7 +31,9 @@
     <script src="compiled/app/views/CardView.js"></script>
     <script src="compiled/app/views/HandView.js"></script>
     <script src="compiled/app/views/AppView.js"></script>
+    <script src="compiled/app/views/PopupView.js"></script>
 
     <script src="compiled/app/main.js"></script>
+    
   </body>
 </html>

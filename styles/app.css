@@ -1,16 +1,317 @@
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+html, body {
+  height: 100%;
+  min-width: 100%;
+}
+
+body {
+  text-align: center;
+  background-image: url(../images/table.jpg);
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Montez', cursive;
+}
+
+body::before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+}
+
+body > div {
+  display: inline-block;
+  width: 99%;
+  vertical-align: middle;
+  margin-top: -100px;
+}
+
+div.buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  /*margin-left: -100px;*/
+  background-color: rgba(0,0,0,0.3);
+  box-shadow: 0 3px 2px rgba(0,0,0,0.7) inset;
+  padding: 25px 20px 25px 0;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 5px;
+  background-color: transparent;
+  color: rgba(255,255,255,0.4);
+  border: 0;
+ /* min-width: 80px;*/
+  margin: 0 20px;
+  font-family: 'Montez', cursive;
+  font-size: 28px;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+button:hover{
+  color: white;
+  -webkit-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  transform: scale(1.2,1.2);
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: rgba(0,0,0,0.8);
+  text-shadow: 0 -1px 1px rgba(255,255,255,0.3);
+  margin: 1rem;
+  padding: 0;
+}
+
 .card {
-  float: left;
-  border: solid 1px black;
+  display: inline-block;
+  /*border: solid 1px black;*/
   width: 100px;
   border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.6);
   height: 140px;
   margin-right: 20px;
+  background-size: cover;
+  background-position: center center;
+  font-size: 0;
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }
 
 .covered {
   background-color: black;
+  background-image: url(../images/b2fv.png);
+  background-size: cover;
+  background-position: center center;
+  font-size: 0;
 }
 
 .hand {
   overflow: auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.SpadesAce {
+  background-image: url(../images/s1.png);
+}
+.Spades2 {
+  background-image: url(../images/s2.png);
+}
+.Spades3 {
+  background-image: url(../images/s3.png);
+}
+.Spades4 {
+  background-image: url(../images/s4.png);
+}
+.Spades5 {
+  background-image: url(../images/s5.png);
+}
+.Spades6 {
+  background-image: url(../images/s6.png);
+}
+.Spades7 {
+  background-image: url(../images/s7.png);
+}
+.Spades8 {
+  background-image: url(../images/s8.png);
+}
+.Spades9 {
+  background-image: url(../images/s9.png);
+}
+.Spades10 {
+  background-image: url(../images/s10.png);
+}
+.SpadesKing {
+  background-image: url(../images/sk.png);
+}
+.SpadesQueen {
+  background-image: url(../images/sq.png);
+}
+.SpadesJack {
+  background-image: url(../images/sj.png);
+}
+
+
+.ClubsAce {
+  background-image: url(../images/c1.png);
+}
+.Clubs2 {
+  background-image: url(../images/c2.png);
+}
+.Clubs3 {
+  background-image: url(../images/c3.png);
+}
+.Clubs4 {
+  background-image: url(../images/c4.png);
+}
+.Clubs5 {
+  background-image: url(../images/c5.png);
+}
+.Clubs6 {
+  background-image: url(../images/c6.png);
+}
+.Clubs7 {
+  background-image: url(../images/c7.png);
+}
+.Clubs8 {
+  background-image: url(../images/c8.png);
+}
+.Clubs9 {
+  background-image: url(../images/c9.png);
+}
+.Clubs10 {
+  background-image: url(../images/c10.png);
+}
+.ClubsKing {
+  background-image: url(../images/ck.png);
+}
+.ClubsQueen {
+  background-image: url(../images/cq.png);
+}
+.ClubsJack {
+  background-image: url(../images/cj.png);
+}
+
+
+.DiamondsAce {
+  background-image: url(../images/d1.png);
+}
+.Diamonds2 {
+  background-image: url(../images/d2.png);
+}
+.Diamonds3 {
+  background-image: url(../images/d3.png);
+}
+.Diamonds4 {
+  background-image: url(../images/d4.png);
+}
+.Diamonds5 {
+  background-image: url(../images/d5.png);
+}
+.Diamonds6 {
+  background-image: url(../images/d6.png);
+}
+.Diamonds7 {
+  background-image: url(../images/d7.png);
+}
+.Diamonds8 {
+  background-image: url(../images/d8.png);
+}
+.Diamonds9 {
+  background-image: url(../images/d9.png);
+}
+.Diamonds10 {
+  background-image: url(../images/d10.png);
+}
+.DiamondsKing {
+  background-image: url(../images/dk.png);
+}
+.DiamondsQueen {
+  background-image: url(../images/dq.png);
+}
+.DiamondsJack {
+  background-image: url(../images/dj.png);
+}
+
+.HeartsAce {
+  background-image: url(../images/h1.png);
+}
+.Hearts2 {
+  background-image: url(../images/h2.png);
+}
+.Hearts3 {
+  background-image: url(../images/h3.png);
+}
+.Hearts4 {
+  background-image: url(../images/h4.png);
+}
+.Hearts5 {
+  background-image: url(../images/h5.png);
+}
+.Hearts6 {
+  background-image: url(../images/h6.png);
+}
+.Hearts7 {
+  background-image: url(../images/h7.png);
+}
+.Hearts8 {
+  background-image: url(../images/h8.png);
+}
+.Hearts9 {
+  background-image: url(../images/h9.png);
+}
+.Hearts10 {
+  background-image: url(../images/h10.png);
+}
+.HeartsKing {
+  background-image: url(../images/hk.png);
+}
+.HeartsQueen {
+  background-image: url(../images/hq.png);
+}
+.HeartsJack {
+  background-image: url(../images/hj.png);
 }
