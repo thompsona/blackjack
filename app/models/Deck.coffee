@@ -7,7 +7,12 @@ class window.Deck extends Backbone.Collection
       new Card
         rank: card % 13
         suit: Math.floor(card / 13)
+    @on 'remove', () =>
+      if @length < 1
+        console.log('deck reset')
+        @initialize()
 
-  dealPlayer: -> new Hand [ @pop(), @pop() ], @, no
+  dealPlayer: -> 
+    new Hand [ @pop(), @pop() ], @, no
 
   dealDealer: -> new Hand [ @pop().flip(), @pop() ], @, yes

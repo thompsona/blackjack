@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "PopupView.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "app/views/PopupView.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,GAAA,EAAA;KAAA;oSAAA;;CAAA,CAAM,IAAM;CAEV;;;;;CAAA;;CAAA,EAAY,IAAA,EAAC,CAAb;CACE,CAAgC,CAAhC,GAAA,CAAO,UAAP;CACC,GAAA,EAAD,CAAA,MAAA;CAFF,IAAY;;CAAZ,EAIQ,GAAR,CAAQ,EAAC;CACD,IAAN,EAAA,MAAA;CALF,IAIQ;;CAJR;;CAF6B,OAAQ;CAAvC"
+}

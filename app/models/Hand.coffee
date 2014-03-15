@@ -33,6 +33,7 @@ class window.Hand extends Backbone.Collection
     if hasAce and (score + 10 <= 21) then [score, score + 10] else [score]
 
   play: ->
-    @hit()
-    @first().flip()
+    @first().set('revealed', true)
+    while @scores()[@scores().length - 1] < 17
+      @hit()
     @trigger "finished"

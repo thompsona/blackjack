@@ -9,7 +9,7 @@ class window.HandView extends Backbone.View
     return Mustache.render(temp, obj)
 
   initialize: ->
-    @collection.on 'add remove change', => @render()
+    @collection.on 'add remove change reset', => @render()
     @render()
 
   render: ->
@@ -19,7 +19,6 @@ class window.HandView extends Backbone.View
       scores: @collection.scores().join(", ")
     }
     str = @template(obj)
-    console.log('html is', str)
     @$el.html( str )
     # @$el.html.slice(0, html.length-1);
     @$el.append @collection.map (card) ->
